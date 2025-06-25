@@ -100,3 +100,7 @@ servicios.txt
 ubicacion.txt
 ```
 3. (Opcional) Agrega preguntas sugeridas en el frontend (faqPorCliente en consulta.component.ts)
+
+## 🖼️ Vista previa
+
+![Vista previa de la aplicación](assets/demo.png)
