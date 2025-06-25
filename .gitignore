@@ -6,7 +6,7 @@ frontend/dist/
 frontend/.angular/
 
 # Python
-backend/__pycache__/
+backend/app/__pycache__/
 backend/env/
 backend/.venv/
 backend/venv/
