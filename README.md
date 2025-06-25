@@ -44,6 +44,13 @@ consultas-app/
 - Uvicorn
 - `GPT4All` corriendo localmente (`http://localhost:4891/v1/chat/completions`)
 
+### Clonar el repositorio
+
+```bash
+git clone https://github.com/luisrapalino/consultas-app.git
+cd consultas-app
+```
+
 ### Instalación de dependencias:
 
 ```bash
@@ -58,6 +65,8 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+El backend quedará disponible en: http://localhost:8000
+
 ### Frontend (Angular 17+, PrimeNG, Vite)
 
 ```bash
@@ -65,6 +74,8 @@ cd frontend
 npm install
 npm run dev
 ```
+El frontend quedará disponible en: http://localhost:4200 o según indique Vite
+
 ### 💡 Notas importantes
 - Los documentos de cada cliente se encuentran en una carpeta específica y se consultan automáticamente por el backend.
 - El historial se guarda localmente por cliente en localStorage.
