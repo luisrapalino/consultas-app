@@ -1,0 +1,86 @@
+<div class="consulta-container">
+  <div class="consulta-bar">
+    <div class="header">
+      <h2>Clientes AI</h2>
+      <button
+        pButton
+        label="Eliminar historial"
+        icon="pi pi-trash"
+        class="p-button-danger"
+        (click)="confirmarEliminacionHistorial()"
+        [disabled]="!historial.length"
+      ></button>
+    </div>
+
+    <p-select
+      [options]="clientes"
+      [(ngModel)]="clienteId"
+      (ngModelChange)="cargarHistorial()"
+      placeholder="Selecciona un cliente"
+    >
+    </p-select>
+
+    <input
+      pInputText
+      type="text"
+      [(ngModel)]="pregunta"
+      [disabled]="cargando"
+      placeholder="Escribe tu pregunta..."
+    />
+
+    <button
+      pButton
+      type="button"
+      label="Consultar"
+      icon="pi pi-search"
+      (click)="consultar()"
+      [disabled]="cargando"
+    ></button>
+
+    <div *ngIf="faqPorCliente[clienteId]?.length">
+      <h4>Preguntas sugeridas</h4>
+      <ul>
+        <li *ngFor="let pregunta of faqPorCliente[clienteId]">
+          <button
+            pButton
+            type="button"
+            (click)="usarPregunta(pregunta)"
+            class="p-button-text"
+            [disabled]="cargando"
+          >
+            {{ pregunta }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="historial">
+    <ng-container *ngFor="let msg of historial">
+      <p-card
+        *ngIf="msg.tipo === 'asistente'"
+        [header]="clienteId === 'cliente_llm' ? 'GPT4All' : clienteId"
+        styleClass="resultado-card"
+      >
+        <p [innerHTML]="msg.texto"></p>
+        <small *ngIf="msg.fuente">Fuente: {{ msg.fuente }}</small>
+      </p-card>
+
+      <p-card
+        *ngIf="msg.tipo === 'usuario'"
+        header="Tú"
+        styleClass="usuario-card"
+        class="usuario-card"
+      >
+        <p>{{ msg.texto }}</p>
+      </p-card>
+    </ng-container>
+  </div>
+
+  <div *ngIf="cargando" class="loading">
+    <i class="pi pi-spin pi-spinner"></i>
+    <span>Cargando...</span>
+  </div>
+</div>
+
+<p-confirmDialog></p-confirmDialog>

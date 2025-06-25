@@ -1,0 +1,1 @@
+Nuestra aplicación móvil permite a los pacientes agendar citas, acceder a sus exámenes y comunicarse con profesionales.
