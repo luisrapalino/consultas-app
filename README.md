@@ -23,6 +23,29 @@ consultas-app/
 
 ---
 
+### 🛠️ Tecnologías y herramientas utilizadas
+
+### Frontend
+- Angular 19: Framework SPA robusto para desarrollo frontend.
+- PrimeNG: Librería de componentes UI con integración fluida en Angular.
+- TypeScript: Tipado fuerte para escalabilidad y mantenibilidad.
+- Vite: Servidor de desarrollo rápido (Angular lo usa internamente desde v17).
+
+### Backend
+- Python 3.10+
+- FastAPI: Framework rápido y moderno para construir APIs con Python.
+- Uvicorn: Servidor ASGI para ejecutar FastAPI.
+- httpx: Cliente HTTP asíncrono para Python.
+
+### IA
+- GPT4All (Meta Llama 3): Modelo de lenguaje ejecutado localmente como API.
+
+### Otras herramientas
+- LocalStorage: Para persistir historial de preguntas por cliente.
+- Marked.js: Para renderizar respuestas en formato Markdown en el frontend.
+- Arquitectura hexagonal: Aplicada en el backend para separar responsabilidades.
+
+
 ## 🚀 Funcionalidades
 
 - Simulación de múltiples clientes con respuestas desde documentos `.txt`.
