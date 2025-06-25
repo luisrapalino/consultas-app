@@ -72,7 +72,7 @@ El backend quedará disponible en: http://localhost:8000
 ```bash
 cd frontend
 npm install
-npm run dev
+ng serve
 ```
 El frontend quedará disponible en: http://localhost:4200 o según indique Vite
 
