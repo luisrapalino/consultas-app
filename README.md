@@ -70,6 +70,7 @@ El backend quedará disponible en: http://localhost:8000
 ### Frontend (Angular 17+, PrimeNG, Vite)
 
 ```bash
+npm install -g @angular/cli
 cd frontend
 npm install
 ng serve
